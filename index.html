@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Luecheng Wang</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 100px auto;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 80px;
+  padding: 0 50px;
+}
+
+/* Sidebar */
+
+.sidebar {
+  position: relative;
+  padding-left: 20px;
+}
+
+.sidebar::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background-color: #4c6a92;
+}
+
+.sidebar h1 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.sidebar .contact {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.sidebar a {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #4c6a92;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.sidebar a:hover {
+  opacity: 0.7;
+}
+
+/* Main content */
+
+.main-section {
+  background-color: #ffffff;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+}
+
+.section-title {
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #6b7280;
+  margin-bottom: 25px;
+}
+
+.section-content p {
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.section-content ul {
+  padding-left: 20px;
+}
+
+.section-content li {
+  margin-bottom: 12px;
+  line-height: 1.7;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .main-section {
+    padding: 30px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h1>Luecheng Wang</h1>
+    <div class="subtitle">
+      PhD Student<br>
+      Language and Information Sciences<br>
+      University of Tokyo
+    </div>
+
+    <div class="contact">
+      wanglc@g.ecc.u-tokyo.ac.jp
+    </div>
+
+    <a href="https://github.com/luechengwang">GitHub</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-section">
+
+    <div class="section-title">Research Interests</div>
+    <div class="section-content">
+      <p>
+        My research centers on figurative meaning in language, particularly metaphor, and its computational modeling in large language and multimodal systems.
+      </p>
+
+      <p><strong>Areas of focus:</strong></p>
+
+      <ul>
+        <li>Internal mechanisms of metaphor processing in large language models</li>
+        <li>Evaluation and interpretation of metaphor understanding</li>
+        <li>Multimodal processing of figurative expressions</li>
+      </ul>
+    </div>
+
+    <div style="height:60px;"></div>
+
+    <div class="section-title">Publications</div>
+    <div class="section-content">
+
+      <p>
+      王 略丞, 林 克彦, 上垣外 英剛.
+      言語モデルにおけるメタファー理解メカニズムの探究.
+      第20回NLP若手の会シンポジウム (YANS), 2025.
+      </p>
+
+      <p>
+      王 略丞, 尾崎 慎太郎, 上垣外 英剛, 林 克彦, Jingun Kwon, 奥村 学, 渡辺 太郎.
+      画像生成モデルにおける直喩喩体の生成挙動分析.
+      言語処理学会第32回年次大会, 2026.
+      </p>
+
+      <p>
+      王 略丞, 林 克彦, 上垣外 英剛.
+      メタファー判断における LLM-as-a-Judge の安定性分析：モデル・プロンプト・人間判断の比較.
+      言語処理学会第32回年次大会, 2026.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
