@@ -5,7 +5,7 @@
 <title>Luecheng Wang</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -39,13 +39,21 @@ body {
   top: 0;
   width: 3px;
   height: 100%;
-  background-color: #4c6a92;
+  background-color: #6846A5;
 }
 
 .sidebar h1 {
-  font-size: 26px;
-  font-weight: 600;
-  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 4px;
+  color: #6846A5;
+}
+
+.sidebar .chinese-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 14px;
 }
 
 .subtitle {
@@ -64,7 +72,7 @@ body {
   display: block;
   margin-bottom: 12px;
   font-size: 14px;
-  color: #4c6a92;
+  color: #6846A5;
   text-decoration: none;
   font-weight: 500;
 }
@@ -104,6 +112,27 @@ body {
   line-height: 1.7;
 }
 
+/* Publications & Awards */
+
+.publication {
+  margin-bottom: 18px;
+  line-height: 1.8;
+}
+
+.publication strong {
+  font-weight: 600;
+}
+
+.publication a {
+  color: #9F7AEA; 
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.publication a:hover {
+  text-decoration: underline;
+}
+
 /* Responsive */
 
 @media (max-width: 900px) {
@@ -127,6 +156,8 @@ body {
   <!-- Sidebar -->
   <div class="sidebar">
     <h1>Luecheng Wang</h1>
+    <div class="chinese-name">王 略丞</div>
+
     <div class="subtitle">
       PhD Student<br>
       Language and Information Sciences<br>
@@ -137,49 +168,58 @@ body {
       wanglc@g.ecc.u-tokyo.ac.jp
     </div>
 
-    <a href="https://github.com/luechengwang">GitHub</a>
+    <a href="https://github.com/luechengwang" target="_blank">GitHub</a>
   </div>
 
   <!-- Main Content -->
   <div class="main-section">
 
+    <!-- Research Interests -->
     <div class="section-title">Research Interests</div>
     <div class="section-content">
       <p>
-        My research centers on figurative meaning in language, particularly metaphor, and its computational modeling in large language and multimodal systems.
+        My research interests include figurative language and its modeling in large language and multimodal systems, with broader connections to cognitive approaches to language.
       </p>
-
-      <p><strong>Areas of focus:</strong></p>
-
-      <ul>
-        <li>Internal mechanisms of metaphor processing in large language models</li>
-        <li>Evaluation and interpretation of metaphor understanding</li>
-        <li>Multimodal processing of figurative expressions</li>
-      </ul>
     </div>
 
     <div style="height:60px;"></div>
 
-    <div class="section-title">Publications</div>
+    <!-- Awards -->
+    <div class="section-title">Awards</div>
     <div class="section-content">
 
-      <p>
-      王 略丞, 林 克彦, 上垣外 英剛.
-      言語モデルにおけるメタファー理解メカニズムの探究.
-      第20回NLP若手の会シンポジウム (YANS), 2025.
-      </p>
+      <div class="publication">
+        言語処理学会第32回年次大会 (NLP2026) 委員特別賞, March 2026.
+        <a href="https://www.anlp.jp/nlp2026/award.html#committee" target="_blank">[Article]</a>
+      </div>
 
-      <p>
-      王 略丞, 尾崎 慎太郎, 上垣外 英剛, 林 克彦, Jingun Kwon, 奥村 学, 渡辺 太郎.
-      画像生成モデルにおける直喩喩体の生成挙動分析.
-      言語処理学会第32回年次大会, 2026.
-      </p>
+    </div>
 
-      <p>
-      王 略丞, 林 克彦, 上垣外 英剛.
-      メタファー判断における LLM-as-a-Judge の安定性分析：モデル・プロンプト・人間判断の比較.
-      言語処理学会第32回年次大会, 2026.
-      </p>
+    <div style="height:60px;"></div>
+
+    <!-- Publications -->
+    <div class="section-title">Publications & Presentations</div>
+    <div class="section-content">
+
+      <div class="publication">
+        <strong>王 略丞</strong>, 尾崎 慎太郎, 上垣外 英剛, 林 克彦, Jingun Kwon, 奥村 学, 渡辺 太郎.
+        画像生成モデルにおける直喩喩体の生成挙動分析.
+        言語処理学会第32回年次大会 (NLP2026), March 2026.
+        <a href="https://www.anlp.jp/proceedings/annual_meeting/2026/pdf_dir/C3-14.pdf" target="_blank">[Paper]</a>
+      </div>
+
+      <div class="publication">
+        <strong>王 略丞</strong>, 林 克彦, 上垣外 英剛.
+        メタファー判断における LLM-as-a-Judge の安定性分析：モデル・プロンプト・人間判断の比較.
+        言語処理学会第32回年次大会 (NLP2026), March 2026.
+        <a href="https://www.anlp.jp/proceedings/annual_meeting/2026/pdf_dir/B1-12.pdf" target="_blank">[Paper]</a>
+      </div>
+
+      <div class="publication">
+        <strong>王 略丞</strong>, 林 克彦, 上垣外 英剛.
+        言語モデルにおけるメタファー理解メカニズムの探究.
+        第20回NLP若手の会シンポジウム (YANS), September 2025.
+      </div>
 
     </div>
 
