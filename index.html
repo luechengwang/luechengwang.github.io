@@ -12,41 +12,51 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background-color: #f3f4f6;
-  color: #111827;
+  background:
+    radial-gradient(circle at 8% 4%, rgba(104, 70, 165, 0.12), transparent 28%),
+    radial-gradient(circle at 92% 96%, rgba(37, 99, 235, 0.08), transparent 30%),
+    #f7f8fc;
+  color: #172033;
 }
 
 .wrapper {
-  max-width: 900px;
-  margin: 80px auto;
+  max-width: 1080px;
+  margin: 56px auto;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 48px;
-  padding: 0 50px;
+  gap: 24px;
+  padding: 0 32px;
 }
 
 /* Sidebar */
 
 .sidebar {
   position: relative;
-  padding-left: 20px;
+  padding: 26px 30px;
+  border: 1px solid rgba(104, 70, 165, 0.14);
+  border-radius: 18px;
+  background: rgba(255,255,255,0.72);
+  box-shadow: 0 16px 40px rgba(44, 34, 77, 0.08);
+  backdrop-filter: blur(12px);
 }
 
 .sidebar::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 0;
+  top: 22px;
   width: 3px;
-  bottom: 0;
-  background-color: #6846A5;
+  height: 58px;
+  border-radius: 0 3px 3px 0;
+  background: linear-gradient(#6846A5, #9a7bd1);
 }
 
 .sidebar h1 {
   font-size: 30px;
   font-weight: 800;
   margin-bottom: 4px;
-  color: #6846A5;
+  letter-spacing: -0.8px;
+  color: #4d327d;
 }
 
 .sidebar .chinese-name {
@@ -57,9 +67,9 @@ body {
 }
 
 .subtitle {
-  color: #6b7280;
+  color: #657083;
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1.75;
   margin-bottom: 0;
 }
 
@@ -74,7 +84,7 @@ body {
   display: block;
   margin-bottom: 12px;
   font-size: 14px;
-  color: #0645AD;
+  color: #315caa;
   text-decoration: none;
   font-weight: 500;
 }
@@ -88,18 +98,31 @@ body {
 /* Main content */
 
 .main-section {
-  background-color: #ffffff;
-  padding: 50px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+  background: rgba(255, 255, 255, 0.88);
+  padding: 48px 52px;
+  border: 1px solid rgba(30, 41, 59, 0.07);
+  border-radius: 22px;
+  box-shadow: 0 20px 60px rgba(44, 34, 77, 0.08);
+  backdrop-filter: blur(12px);
 }
 
 .section-title {
   font-size: 13px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: #6b7280;
-  margin-bottom: 25px;
+  color: #6846A5;
+  font-weight: 800;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-title::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(90deg, rgba(104, 70, 165, 0.28), transparent);
 }
 
 .section-content p {
@@ -131,7 +154,17 @@ body {
 
 .publication {
   margin-bottom: 18px;
+  padding: 14px 16px;
+  border-left: 2px solid transparent;
+  border-radius: 10px;
   line-height: 1.8;
+  transition: background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.publication:hover {
+  background: #faf9ff;
+  border-left-color: #9a7bd1;
+  transform: translateX(3px);
 }
 
 .publication strong {
@@ -169,6 +202,11 @@ body {
 
   .main-section {
     padding: 30px;
+  }
+
+  .sidebar {
+    position: relative;
+    top: auto;
   }
 }
 
@@ -215,6 +253,10 @@ body {
     <div class="section-content">
 
       <div class="publication">
+        ACM SIGMM Travel Award, August 2026.
+      </div>
+
+      <div class="publication">
         第268回 情報処理学会 自然言語処理(NL)研究発表会 若手奨励賞, June 2026.
         <a href="https://www.ipsj.or.jp/award/nl-award2.html" target="_blank">[Article]</a>
       </div>
@@ -235,13 +277,25 @@ body {
 
       <div class="publication">
         <span class="entry-title">
-          <a href="https://arxiv.org/abs/2608.04750" target="_blank">Simile Understanding in Text-to-Image Models: An Evaluation Framework</a>
+          <a href="https://doi.org/10.1145/3767308.3835998" target="_blank">Simile Understanding in Text-to-Image Models: An Evaluation Framework</a>
         </span>
         <span class="entry-authors">
           <strong>Luecheng Wang</strong>, Shintaro Ozaki, Hidetaka Kamigaito, Katsuhiko Hayashi, Jingun Kwon, Manabu Okumura, Taro Watanabe.
         </span>
         <span class="entry-venue">
-          Proceedings of the 34th ACM International Conference on Multimedia, full paper accepted.
+          Proceedings of the 34th ACM International Conference on Multimedia, Main Conference paper, pages 10335–10344, November 2026.
+        </span>
+      </div>
+
+      <div class="publication">
+        <span class="entry-title">
+          <a href="https://aclanthology.org/2026.aacl-short.3/" target="_blank">Constructive Comment Extraction from Japanese YouTube Shorts: A Dataset and Empirical Study</a>
+        </span>
+        <span class="entry-authors">
+          Siyuan Feng, <strong>Luecheng Wang (co-first author)</strong>, Koyo Ogura, Yuma Iwamoto, Seinosuke Sato, Yuki Kometani, Masaki Itabashi, Shintaro Ozaki, Yusuke Sakai, Shogo Matsuno, Hidetaka Kamigaito, Katsuhiko Hayashi, Ryoma Obara, Sho Takase, Taro Watanabe.
+        </span>
+        <span class="entry-venue">
+          Proceedings of the 15th International Joint Conference on Natural Language Processing and the 5th Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics (AACL-IJCNLP 2026), Main Conference paper, November 2026.
         </span>
       </div>
 
@@ -253,6 +307,18 @@ body {
     <!-- Presentations -->
     <div class="section-title">Presentations</div>
     <div class="section-content">
+
+      <div class="publication">
+        <span class="entry-title">
+          動画生成モデルにおける直喩理解と喩体の生成挙動.
+        </span>
+        <span class="entry-authors">
+          <strong>王略丞</strong>, 尾崎 慎太郎, 上垣外 英剛, 林 克彦, Kwon Jingun, 奥村 学, 渡辺 太郎.
+        </span>
+        <span class="entry-venue">
+          第21回言語処理若手シンポジウム (YANS), August 2026.
+        </span>
+      </div>
 
       <div class="publication">
         <span class="entry-title">
